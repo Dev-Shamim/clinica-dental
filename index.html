@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Dental | Tu sonrisa en las mejores manos</title>
+    <meta name="description" content="Clínica dental especializada en ortodoncia, implantes y estética dental. Tecnología de vanguardia y trato cercano en Portugalete.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e293b', // Dark slate/navy from logo
+                        secondary: '#d4af37', // Gold/Beige accent
+                        'accent-light': '#fdfbf7', // Light beige background from screenshots
+                        'accent-beige': '#e5d5c0', // Darker beige for elements
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Utilities */
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .clip-wave {
+            clip-path: ellipse(150% 100% at 50% 100%);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-700 antialiased bg-white">
+
+    <!-- Navbar -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i class="fa-solid fa-tooth text-3xl text-primary"></i>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold text-primary tracking-tight leading-none">CLÍNICA DENTAL</span>
+                        <span class="text-xs text-gray-500 uppercase tracking-widest">Excelencia & Salud</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-gray-600 hover:text-primary font-medium transition">Inicio</a>
+                    <a href="#clinica" class="text-gray-600 hover:text-primary font-medium transition">La Clínica</a>
+                    <a href="#tratamientos" class="text-gray-600 hover:text-primary font-medium transition">Tratamientos</a>
+                    <a href="#equipo" class="text-gray-600 hover:text-primary font-medium transition">Equipo</a>
+                    <a href="#contacto" class="text-gray-600 hover:text-primary font-medium transition">Contacto</a>
+                    <a href="#cita" class="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-slate-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        Pedir Cita
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
+                <a href="#inicio" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Inicio</a>
+                <a href="#clinica" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">La Clínica</a>
+                <a href="#tratamientos" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Tratamientos</a>
+                <a href="#equipo" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Equipo</a>
+                <a href="#contacto" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Contacto</a>
+                <a href="#cita" class="block mt-4 text-center w-full bg-primary text-white px-4 py-3 rounded-lg font-medium">Pedir Cita</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-20 lg:pt-0 lg:h-screen flex items-center bg-accent-light overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20 hidden lg:block">
+             <!-- Abstract background shape -->
+             <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full text-accent-beige fill-current">
+                 <path d="M0 0 L50 0 L100 100 L0 100 Z" opacity="0.5" />
+             </svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-8">
+            <!-- Text Content -->
+            <div class="w-full lg:w-1/2 text-center lg:text-left pt-10 lg:pt-0 pb-12 lg:pb-0">
+                <div class="inline-flex items-center gap-2 mb-6">
+                    <span class="w-8 h-1 bg-secondary rounded-full"></span>
+                    <span class="text-secondary font-semibold uppercase tracking-wider text-sm">Estética Dental en Portugalete</span>
+                </div>
+                <h1 class="text-4xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
+                    Tu sonrisa más bonita y <span class="text-secondary">natural</span>.
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                    En nuestra clínica dental te ayudamos a conseguir la sonrisa que siempre has querido. Tratamientos personalizados, mínimamente invasivos y con un enfoque honesto.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#cita" class="bg-primary hover:bg-slate-800 text-white px-8 py-4 rounded-full text-lg font-medium transition shadow-lg hover:shadow-xl text-center">
+                        Solicita tu cita
+                    </a>
+                    <a href="#tratamientos" class="bg-white border-2 border-gray-200 hover:border-primary text-primary px-8 py-4 rounded-full text-lg font-medium transition text-center">
+                        Ver tratamientos
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image Content -->
+            <div class="w-full lg:w-1/2 relative">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl transform lg:translate-x-10 aspect-[4/3] group">
+                    <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f72?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Doctora sonriendo con paciente" 
+                         class="object-cover w-full h-full transition duration-700 group-hover:scale-105">
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute bottom-6 left-6 bg-white p-4 rounded-2xl shadow-lg flex items-center gap-4 animate-bounce-slow">
+                        <div class="bg-green-100 p-3 rounded-full text-green-600">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-gray-900">4.9/5 Valoración</p>
+                            <p class="text-xs text-gray-500">Pacientes felices</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="tratamientos" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <i class="fa-solid fa-tooth text-3xl text-secondary mb-4 block"></i>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Tratamientos adaptados a ti</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Cuidamos cada detalle de tu salud bucodental con tecnología de vanguardia y especialistas en cada área.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-primary text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Estética Dental</h3>
+                    <p class="text-gray-600 mb-4">Diseño de sonrisa, carillas de porcelana y blanqueamientos para una sonrisa radiante y natural.</p>
+                    <a href="#" class="text-secondary font-semibold hover:text-primary transition inline-flex items-center gap-2">
+                        Saber más <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-primary text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="fa-solid fa-teeth"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Implantología</h3>
+                    <p class="text-gray-600 mb-4">Recupera la funcionalidad y estética de tu boca con implantes de alta gama y carga inmediata.</p>
+                    <a href="#" class="text-secondary font-semibold hover:text-primary transition inline-flex items-center gap-2">
+                        Saber más <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-primary text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="fa-solid fa-arrows-spin"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Ortodoncia</h3>
+                    <p class="text-gray-600 mb-4">Ortodoncia invisible (Invisalign) y brackets estéticos para niños y adultos.</p>
+                    <a href="#" class="text-secondary font-semibold hover:text-primary transition inline-flex items-center gap-2">
+                        Saber más <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-primary text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="fa-solid fa-child-reaching"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Odontopediatría</h3>
+                    <p class="text-gray-600 mb-4">Cuidamos de la salud dental de los más pequeños en un entorno amable y sin miedo.</p>
+                    <a href="#" class="text-secondary font-semibold hover:text-primary transition inline-flex items-center gap-2">
+                        Saber más <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-primary text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Periodoncia</h3>
+                    <p class="text-gray-600 mb-4">Tratamiento y prevención de enfermedades de las encías para mantener tus dientes sanos.</p>
+                    <a href="#" class="text-secondary font-semibold hover:text-primary transition inline-flex items-center gap-2">
+                        Saber más <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-primary text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="fa-solid fa-kit-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Odontología General</h3>
+                    <p class="text-gray-600 mb-4">Revisiones, empastes, endodoncias y todo lo necesario para tu salud bucodental diaria.</p>
+                    <a href="#" class="text-secondary font-semibold hover:text-primary transition inline-flex items-center gap-2">
+                        Saber más <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinic / Process Section (Beige Background) -->
+    <section id="clinica" class="py-24 bg-accent-beige/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Intro -->
+            <div class="flex flex-col lg:flex-row items-center gap-16 mb-24">
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-secondary/20 rounded-full z-0"></div>
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Instalaciones Clínica" 
+                         class="rounded-2xl shadow-xl relative z-10 w-full object-cover h-[400px]">
+                </div>
+                <div class="lg:w-1/2">
+                    <span class="text-secondary font-semibold uppercase tracking-wider text-sm block mb-2">Nuestra Clínica</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Un espacio diseñado para tu tranquilidad</h2>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                        En Clínica Dental queremos que te sientas como en casa. Hemos diseñado nuestras instalaciones pensando en tu comodidad, con la última tecnología digital para diagnósticos precisos y un ambiente relajado.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-green-500"></i> <span class="text-gray-700">Tecnología de escáner 3D</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-green-500"></i> <span class="text-gray-700">Sedación consciente</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-green-500"></i> <span class="text-gray-700">Salas de espera confortables</span>
+                        </li>
+                    </ul>
+                    <a href="#equipo" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-slate-800 transition">
+                        Conoce al equipo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Steps (The Circle Process from screenshots) -->
+            <div class="text-center mb-16">
+                <h3 class="text-2xl font-bold text-primary mb-12">Un proceso claro y transparente</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                    <!-- Connecting line (desktop only) -->
+                    <div class="hidden lg:block absolute top-8 left-[12%] right-[12%] h-0.5 bg-gray-300 -z-10 border-t-2 border-dashed border-gray-300"></div>
+
+                    <!-- Step 1 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm relative group hover:-translate-y-2 transition duration-300">
+                        <div class="w-16 h-16 bg-accent-light border-2 border-secondary text-secondary rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4 group-hover:bg-secondary group-hover:text-white transition">1</div>
+                        <h4 class="font-bold text-primary mb-2">Primera Visita</h4>
+                        <p class="text-sm text-gray-600">Revisión completa, radiografías y diagnóstico inicial sin compromiso.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm relative group hover:-translate-y-2 transition duration-300">
+                        <div class="w-16 h-16 bg-accent-light border-2 border-secondary text-secondary rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4 group-hover:bg-secondary group-hover:text-white transition">2</div>
+                        <h4 class="font-bold text-primary mb-2">Plan de Tratamiento</h4>
+                        <p class="text-sm text-gray-600">Te explicamos las opciones y diseñamos un presupuesto a tu medida.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm relative group hover:-translate-y-2 transition duration-300">
+                        <div class="w-16 h-16 bg-accent-light border-2 border-secondary text-secondary rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4 group-hover:bg-secondary group-hover:text-white transition">3</div>
+                        <h4 class="font-bold text-primary mb-2">Tratamiento</h4>
+                        <p class="text-sm text-gray-600">Comenzamos el proceso con suavidad y las mejores técnicas.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm relative group hover:-translate-y-2 transition duration-300">
+                        <div class="w-16 h-16 bg-accent-light border-2 border-secondary text-secondary rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4 group-hover:bg-secondary group-hover:text-white transition">4</div>
+                        <h4 class="font-bold text-primary mb-2">Seguimiento</h4>
+                        <p class="text-sm text-gray-600">Revisiones periódicas para garantizar que tu sonrisa dure para siempre.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipo" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-secondary font-semibold uppercase tracking-wider text-sm block mb-2">Nuestro Equipo</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary">Profesionales comprometidos contigo</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Doctor 1 -->
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-2xl mb-4 aspect-[4/5] bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop" 
+                             alt="Dr. Óscar Puertollano" 
+                             class="w-full h-full object-cover transition duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
+                    </div>
+                    <h3 class="text-xl font-bold text-primary">Dr. Antonio García</h3>
+                    <p class="text-secondary font-medium">Cirugía e Implantes</p>
+                    <p class="text-gray-500 text-sm mt-2">Nº Col. 48002134</p>
+                </div>
+
+                <!-- Doctor 2 -->
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-2xl mb-4 aspect-[4/5] bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=800&auto=format&fit=crop" 
+                             alt="Dra. Maider Arrieta" 
+                             class="w-full h-full object-cover transition duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
+                    </div>
+                    <h3 class="text-xl font-bold text-primary">Dra. Maider Pérez</h3>
+                    <p class="text-secondary font-medium">Ortodoncia y Odontopediatría</p>
+                    <p class="text-gray-500 text-sm mt-2">Nº Col. 48001982</p>
+                </div>
+
+                <!-- Doctor 3 -->
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-2xl mb-4 aspect-[4/5] bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop" 
+                             alt="Dra. Uxue" 
+                             class="w-full h-full object-cover transition duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
+                    </div>
+                    <h3 class="text-xl font-bold text-primary">Dra. Uxue Ruiz</h3>
+                    <p class="text-secondary font-medium">Periodoncia y Estética</p>
+                    <p class="text-gray-500 text-sm mt-2">Nº Col. 48002555</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials (Simple) -->
+    <section class="py-16 bg-primary text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <i class="fa-solid fa-quote-left text-4xl text-secondary mb-6 opacity-50"></i>
+            <h3 class="text-2xl md:text-3xl font-light italic mb-8">
+                "Increíble trato y profesionalidad. Tenía pánico al dentista y aquí me han hecho sentir súper cómoda. El resultado de mi ortodoncia ha sido espectacular."
+            </h3>
+            <div class="flex items-center justify-center gap-4">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Paciente" class="w-12 h-12 rounded-full border-2 border-secondary">
+                <div class="text-left">
+                    <p class="font-bold text-white">Laura Martínez</p>
+                    <div class="flex text-secondary text-sm">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section id="contacto" class="relative bg-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12">
+                
+                <!-- Contact Info -->
+                <div class="lg:w-1/3">
+                    <span class="text-secondary font-semibold uppercase tracking-wider text-sm block mb-2">Contacto</span>
+                    <h2 class="text-3xl font-bold text-primary mb-8">Estamos en Portugalete</h2>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Dirección</h4>
+                                <p class="text-gray-600">Calle San Nicolás, 7<br>48920 Portugalete, Bizkaia</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Teléfono</h4>
+                                <p class="text-gray-600">
+                                    <a href="tel:944720932" class="hover:text-primary">944 72 09 32</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">WhatsApp</h4>
+                                <p class="text-gray-600">688 811 649</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Horario</h4>
+                                <p class="text-gray-600 text-sm">Lunes a Jueves: 9:30 - 13:30 | 15:00 - 20:00</p>
+                                <p class="text-gray-600 text-sm">Viernes: 9:30 - 15:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div id="cita" class="lg:w-2/3 bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="text-2xl font-bold text-primary mb-2">Solicita tu cita previa</h3>
+                    <p class="text-gray-600 mb-6 text-sm">Rellena el formulario y te contactaremos para confirmar tu visita.</p>
+                    
+                    <form onsubmit="handleSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Nombre *</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition bg-white" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Apellidos *</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition bg-white" placeholder="Tus apellidos">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Teléfono *</label>
+                                <input type="tel" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition bg-white" placeholder="Ej: 600 000 000">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition bg-white" placeholder="tu@email.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition bg-white" placeholder="¿En qué podemos ayudarte?"></textarea>
+                        </div>
+
+                        <div class="flex items-start gap-2">
+                            <input type="checkbox" required id="privacy" class="mt-1">
+                            <label for="privacy" class="text-xs text-gray-500">He leído y acepto la política de privacidad y el tratamiento de mis datos personales.</label>
+                        </div>
+
+                        <button type="submit" class="w-full bg-primary text-white font-bold py-4 rounded-lg hover:bg-slate-800 transition shadow-lg hover:shadow-xl">
+                            Enviar Solicitud
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Map Integration (Iframe Placeholder) -->
+            <div class="mt-16 w-full h-96 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.056020739857!2d-3.02345!3d43.3189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e5a0000000000%3A0x0!2sPortugalete%2C%20Bizkaia!5e0!3m2!1ses!2ses!4v1645000000000!5m2!1ses!2ses" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                         <i class="fa-solid fa-tooth text-2xl text-primary"></i>
+                         <span class="text-lg font-bold text-primary">CLÍNICA DENTAL</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        Comprometidos con tu bienestar bucodental. Ofrecemos tratamientos personalizados, mínimamente invasivos y basados en la prevención.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Treatments -->
+                <div>
+                    <h4 class="font-bold text-primary mb-4">Tratamientos</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-primary">Odontología General</a></li>
+                        <li><a href="#" class="hover:text-primary">Implantes Dentales</a></li>
+                        <li><a href="#" class="hover:text-primary">Ortodoncia Invisible</a></li>
+                        <li><a href="#" class="hover:text-primary">Estética Dental</a></li>
+                        <li><a href="#" class="hover:text-primary">Odontopediatría</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold text-primary mb-4">La Clínica</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#inicio" class="hover:text-primary">Inicio</a></li>
+                        <li><a href="#equipo" class="hover:text-primary">Nuestro Equipo</a></li>
+                        <li><a href="#clinica" class="hover:text-primary">Instalaciones</a></li>
+                        <li><a href="#contacto" class="hover:text-primary">Contacto</a></li>
+                        <li><a href="#" class="hover:text-primary">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Badges -->
+                <div>
+                    <h4 class="font-bold text-primary mb-4">Certificaciones</h4>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-gray-200 px-3 py-1 rounded text-xs text-gray-600 font-semibold">Kit Digital</div>
+                        <div class="bg-gray-200 px-3 py-1 rounded text-xs text-gray-600 font-semibold">Financiado UE</div>
+                        <div class="bg-gray-200 px-3 py-1 rounded text-xs text-gray-600 font-semibold">Colegio Odont.</div>
+                    </div>
+                    <div class="mt-6">
+                        <a href="#cita" class="text-secondary font-bold hover:underline">Solicitar cita online</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 pt-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2024 Clínica Dental. Todos los derechos reservados.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-gray-900">Aviso Legal</a>
+                    <a href="#" class="hover:text-gray-900">Política de Privacidad</a>
+                    <a href="#" class="hover:text-gray-900">Política de Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile CTA Fixed Button -->
+    <div class="fixed bottom-0 w-full bg-white border-t border-gray-200 p-4 md:hidden z-40 flex justify-between gap-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+        <a href="tel:944720932" class="flex-1 bg-gray-100 text-primary font-bold py-3 rounded-lg text-center flex items-center justify-center gap-2">
+            <i class="fa-solid fa-phone"></i> Llamar
+        </a>
+        <a href="#cita" class="flex-1 bg-secondary text-white font-bold py-3 rounded-lg text-center">
+            Pedir Cita
+        </a>
+    </div>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Form Handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('button');
+            const originalText = btn.innerText;
+            
+            btn.innerText = 'Enviando...';
+            btn.disabled = true;
+            btn.classList.add('opacity-75');
+
+            // Simulate server request
+            setTimeout(() => {
+                alert('¡Gracias! Hemos recibido tu solicitud. Te contactaremos en breve para confirmar la cita.');
+                event.target.reset();
+                btn.innerText = 'Mensaje Enviado';
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-green-600');
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                    btn.classList.remove('opacity-75', 'bg-green-600');
+                    btn.classList.add('bg-primary');
+                }, 3000);
+            }, 1500);
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
