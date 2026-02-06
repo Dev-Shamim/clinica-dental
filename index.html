@@ -121,67 +121,68 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="relative pt-20 lg:pt-0 lg:h-screen flex items-center bg-accent-light overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-20 hidden lg:block">
-             <!-- Abstract background shape -->
-             <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full text-accent-beige fill-current">
-                 <path d="M0 0 L50 0 L100 100 L0 100 Z" opacity="0.5" />
-             </svg>
+    <section id="inicio" class="relative min-h-screen flex items-center bg-primary overflow-hidden pt-24 pb-12">
+        <!-- Full Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2000&auto=format&fit=crop" 
+                 alt="Clínica Dental Puertollano" 
+                 class="w-full h-full object-cover">
+            <!-- Background Overlay -->
+            <div class="absolute inset-0 bg-primary/70 backdrop-blur-[2px]"></div>
         </div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-8">
-            <!-- Text Content -->
-            <div class="w-full lg:w-1/2 text-center lg:text-left pt-10 lg:pt-0 pb-12 lg:pb-0">
-                <div class="inline-flex items-center gap-2 mb-6">
-                    <span class="w-8 h-1 bg-secondary rounded-full"></span>
-                    <span class="text-secondary font-semibold uppercase tracking-wider text-sm">Estética Dental en Portugalete</span>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 mb-8 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-white/20">
+                    <span class="w-2 h-2 bg-secondary rounded-full animate-pulse"></span>
+                    <span class="text-white font-bold uppercase tracking-widest text-xs">Clínica Dental Óscar Puertollano</span>
                 </div>
-                <h1 class="text-4xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
-                    Tu sonrisa más bonita y <span class="text-secondary">natural</span>.
+                <h1 class="text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+                    Tu dentista de <span class="text-secondary italic">confianza</span> en Portugalete.
                 </h1>
-                <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                    En nuestra clínica dental te ayudamos a conseguir la sonrisa que siempre has querido. Tratamientos personalizados, mínimamente invasivos y con un enfoque honesto.
+                <p class="text-xl lg:text-2xl text-gray-200 mb-12 leading-relaxed font-light">
+                    Excelencia, honestidad y la tecnología más avanzada para cuidar de tu salud bucodental y la de los tuyos.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#cita" class="bg-primary hover:bg-slate-800 text-white px-8 py-4 rounded-full text-lg font-medium transition shadow-lg hover:shadow-xl text-center">
-                        Solicita tu cita
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="contacto.html#cita" class="bg-secondary hover:bg-white text-primary px-10 py-5 rounded-full text-lg font-bold transition shadow-2xl transform hover:-translate-y-1 text-center">
+                        Solicitar Cita Online
                     </a>
-                    <a href="#tratamientos" class="bg-white border-2 border-gray-200 hover:border-primary text-primary px-8 py-4 rounded-full text-lg font-medium transition text-center">
-                        Ver tratamientos
+                    <a href="nuestra-clinica.html" class="bg-white/10 border-2 border-white/20 hover:bg-white hover:text-primary text-white px-10 py-5 rounded-full text-lg font-bold transition text-center backdrop-blur-sm">
+                        Conoce la Clínica
                     </a>
                 </div>
-            </div>
-
-            <!-- Image Content -->
-            <div class="w-full lg:w-1/2 relative">
-                <div class="relative rounded-3xl overflow-hidden shadow-2xl transform lg:translate-x-10 aspect-[4/3] group">
-                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=868&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                         alt="Doctora sonriendo con paciente" 
-                         class="object-cover w-full h-full transition duration-700 group-hover:scale-105">
-                    
-                    <!-- Floating Badge -->
-                    <div class="absolute bottom-6 left-6 bg-white p-4 rounded-2xl shadow-lg flex items-center gap-4 animate-bounce-slow">
-                        <div class="bg-green-100 p-3 rounded-full text-green-600">
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <div>
-                            <p class="text-sm font-bold text-gray-900">4.9/5 Valoración</p>
-                            <p class="text-xs text-gray-500">Pacientes felices</p>
-                        </div>
+                
+                <!-- Trust Badges -->
+                <div class="mt-16 flex flex-wrap gap-8">
+                    <div class="flex items-center gap-3 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-xl border border-white/10">
+                        <i class="fa-solid fa-certificate text-secondary"></i>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Invisalign Diamond</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-xl border border-white/10">
+                        <i class="fa-solid fa-award text-secondary"></i>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">ISO 9001 Salud</span>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+            <a href="#tratamientos" class="text-white/50 hover:text-white transition">
+                <i class="fa-solid fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
     </section>
 
     <!-- Services Section -->
-    <section id="tratamientos" class="py-24 bg-white">
+    <section id="tratamientos" class="py-32 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <i class="fa-solid fa-tooth text-3xl text-secondary mb-4 block"></i>
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Tratamientos adaptados a ti</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    Cuidamos cada detalle de tu salud bucodental con tecnología de vanguardia y especialistas en cada área.
+            <div class="text-center mb-24">
+                <span class="text-secondary font-black uppercase tracking-[0.3em] text-xs mb-4 block">Especialidades</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">Tratamientos dentales personalizados en Portugalete</h2>
+                <div class="w-24 h-1.5 bg-secondary mx-auto rounded-full mb-8"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg font-light">
+                    Utilizamos protocolos de última generación y materiales de alta gama para garantizar resultados duraderos y naturales.
                 </p>
             </div>
 
