@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estética Dental | Clínica Dental</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e293b',
+                        secondary: '#d4af37',
+                        'accent-light': '#fdfbf7',
+                        'accent-beige': '#e5d5c0',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-700 antialiased bg-white pt-20">
+
+    <!-- Navbar -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-tooth text-3xl text-primary"></i>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold text-primary tracking-tight leading-none">CLÍNICA DENTAL</span>
+                        <span class="text-xs text-gray-500 uppercase tracking-widest">Excelencia & Salud</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium transition">Inicio</a>
+                    <a href="nuestra-clinica.html" class="text-gray-600 hover:text-primary font-medium transition">La Clínica</a>
+                    <div class="relative dropdown">
+                        <button class="flex items-center gap-1 text-primary font-bold transition py-8 border-b-2 border-secondary">
+                            Tratamientos <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="odontologia-general.html">Odontología General</a>
+                            <a href="implantes.html">Implantología</a>
+                            <a href="ortodoncia.html">Ortodoncia Invisible</a>
+                            <a href="estetica-dental.html">Estética Dental</a>
+                            <a href="odontopediatria.html">Odontopediatría</a>
+                            <a href="periodoncia.html">Periodoncia</a>
+                            <a href="endodoncia.html">Endodoncia</a>
+                        </div>
+                    </div>
+                    <a href="nuestro-equipo.html" class="text-gray-600 hover:text-primary font-medium transition">Equipo</a>
+                    <a href="contacto.html" class="text-gray-600 hover:text-primary font-medium transition">Contacto</a>
+                    <a href="contacto.html#cita" class="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-slate-800 transition shadow-lg">Pedir Cita</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full max-h-[80vh] overflow-y-auto">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
+                <a href="index.html" class="block px-3 py-3 text-base font-medium text-gray-700">Inicio</a>
+                <a href="nuestra-clinica.html" class="block px-3 py-3 text-base font-medium text-gray-700">La Clínica</a>
+                <div>
+                    <button class="mobile-dropdown-trigger w-full flex justify-between items-center px-3 py-3 text-base font-medium text-gray-700">
+                        Tratamientos <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="mobile-dropdown-menu space-y-1">
+                        <a href="odontologia-general.html" class="block px-6 py-2 text-sm text-gray-600">Odontología General</a>
+                        <a href="implantes.html" class="block px-6 py-2 text-sm text-gray-600">Implantología</a>
+                        <a href="ortodoncia.html" class="block px-6 py-2 text-sm text-gray-600">Ortodoncia Invisible</a>
+                        <a href="estetica-dental.html" class="block px-6 py-2 text-sm text-primary font-bold">Estética Dental</a>
+                        <a href="odontopediatria.html" class="block px-6 py-2 text-sm text-gray-600">Odontopediatría</a>
+                        <a href="periodoncia.html" class="block px-6 py-2 text-sm text-gray-600">Periodoncia</a>
+                        <a href="endodoncia.html" class="block px-6 py-2 text-sm text-gray-600">Endodoncia</a>
+                    </div>
+                </div>
+                <a href="nuestro-equipo.html" class="block px-3 py-3 text-base font-medium text-gray-700">Equipo</a>
+                <a href="contacto.html" class="block px-3 py-3 text-base font-medium text-gray-700">Contacto</a>
+                <a href="contacto.html#cita" class="block mt-4 text-center w-full bg-primary text-white px-4 py-3 rounded-lg font-medium">Pedir Cita</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-white pt-24 pb-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-primary mb-6">Diseñamos tu mejor <span class="text-secondary">sonrisa</span></h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Mejora la estética, el color y la forma de tus dientes con nuestros tratamientos personalizados. Resultados naturales para que vuelvas a sonreír con total confianza.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="contacto.html#cita" class="bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition shadow-xl text-center">Diseña tu Sonrisa</a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=600&auto=format&fit=crop" alt="Blanqueamiento" class="rounded-2xl shadow-lg mt-8">
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=600&auto=format&fit=crop" alt="Carillas" class="rounded-2xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments Grid -->
+    <section class="py-24 bg-accent-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-4">Soluciones de Estética Dental</h2>
+                <p class="text-gray-600">Tratamientos a medida para cada necesidad</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-bold text-primary mb-4">Blanqueamiento Dental</h3>
+                    <p class="text-gray-600 mb-6">Recupera la blancura natural de tus dientes en una sola sesión con nuestra tecnología de luz LED fría. Seguro, rápido y eficaz.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Resultados inmediatos</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> No daña el esmalte</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-bold text-primary mb-4">Carillas de Porcelana</h3>
+                    <p class="text-gray-600 mb-6">Láminas ultrafinas que se adhieren al diente para corregir forma, color y posición de manera permanente.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Estética premium</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Alta resistencia</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-bold text-primary mb-4">Composite Estético</h3>
+                    <p class="text-gray-600 mb-6">Reconstrucciones precisas para cerrar espacios o arreglar pequeñas imperfecciones sin tallar el diente.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Mínimamente invasivo</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Económico y rápido</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-bold text-primary mb-4">Gingivectomía</h3>
+                    <p class="text-gray-600 mb-6">Remodelación de la encía para corregir la "sonrisa gingival" y armonizar la proporción diente-encía.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Armonía facial</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Recuperación rápida</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6 justify-center md:justify-start">
+                         <i class="fa-solid fa-tooth text-2xl text-primary"></i>
+                         <span class="text-lg font-bold text-primary">CLÍNICA DENTAL</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Comprometidos con tu bienestar bucodental. Ofrecemos tratamientos personalizados y de calidad.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-primary mb-4">Tratamientos</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="odontologia-general.html" class="hover:text-primary">Odontología General</a></li>
+                        <li><a href="implantes.html" class="hover:text-primary">Implantes Dentales</a></li>
+                        <li><a href="ortodoncia.html" class="hover:text-primary">Ortodoncia Invisible</a></li>
+                        <li><a href="estetica-dental.html" class="hover:text-primary">Estética Dental</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-primary mb-4">La Clínica</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="nuestra-clinica.html" class="hover:text-primary">Instalaciones</a></li>
+                        <li><a href="nuestro-equipo.html" class="hover:text-primary">Nuestro Equipo</a></li>
+                        <li><a href="contacto.html" class="hover:text-primary">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-primary mb-4">Contacto</h4>
+                    <p class="text-sm text-gray-600 mb-2">Calle San Nicolás, 7, Portugalete</p>
+                    <p class="text-sm text-gray-600">944 72 09 32</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2024 Clínica Dental. Todos los derechos reservados.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

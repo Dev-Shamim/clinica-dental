@@ -15,6 +15,9 @@
     <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
     <script>
         tailwind.config = {
             theme: {
@@ -35,15 +38,6 @@
             }
         }
     </script>
-    <style>
-        /* Custom Utilities */
-        .text-shadow {
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .clip-wave {
-            clip-path: ellipse(150% 100% at 50% 100%);
-        }
-    </style>
 </head>
 <body class="font-sans text-gray-700 antialiased bg-white">
 
@@ -52,22 +46,38 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
                     <i class="fa-solid fa-tooth text-3xl text-primary"></i>
                     <div class="flex flex-col">
                         <span class="text-xl font-bold text-primary tracking-tight leading-none">CLÍNICA DENTAL</span>
                         <span class="text-xs text-gray-500 uppercase tracking-widest">Excelencia & Salud</span>
                     </div>
-                </div>
+                </a>
 
                 <!-- Desktop Menu -->
                 <nav class="hidden md:flex space-x-8 items-center">
-                    <a href="#inicio" class="text-gray-600 hover:text-primary font-medium transition">Inicio</a>
-                    <a href="#clinica" class="text-gray-600 hover:text-primary font-medium transition">La Clínica</a>
-                    <a href="#tratamientos" class="text-gray-600 hover:text-primary font-medium transition">Tratamientos</a>
-                    <a href="#equipo" class="text-gray-600 hover:text-primary font-medium transition">Equipo</a>
-                    <a href="#contacto" class="text-gray-600 hover:text-primary font-medium transition">Contacto</a>
-                    <a href="#cita" class="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-slate-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium transition">Inicio</a>
+                    <a href="nuestra-clinica.html" class="text-gray-600 hover:text-primary font-medium transition">La Clínica</a>
+                    
+                    <!-- Dropdown Tratamientos -->
+                    <div class="relative dropdown">
+                        <button class="flex items-center gap-1 text-gray-600 hover:text-primary font-medium transition py-8">
+                            Tratamientos <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="odontologia-general.html">Odontología General</a>
+                            <a href="implantes.html">Implantología</a>
+                            <a href="ortodoncia.html">Ortodoncia Invisible</a>
+                            <a href="estetica-dental.html">Estética Dental</a>
+                            <a href="odontopediatria.html">Odontopediatría</a>
+                            <a href="periodoncia.html">Periodoncia</a>
+                            <a href="endodoncia.html">Endodoncia</a>
+                        </div>
+                    </div>
+
+                    <a href="nuestro-equipo.html" class="text-gray-600 hover:text-primary font-medium transition">Equipo</a>
+                    <a href="contacto.html" class="text-gray-600 hover:text-primary font-medium transition">Contacto</a>
+                    <a href="contacto.html#cita" class="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-slate-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Pedir Cita
                     </a>
                 </nav>
@@ -82,14 +92,30 @@
         </div>
 
         <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full max-h-[80vh] overflow-y-auto">
             <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
-                <a href="#inicio" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Inicio</a>
-                <a href="#clinica" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">La Clínica</a>
-                <a href="#tratamientos" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Tratamientos</a>
-                <a href="#equipo" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Equipo</a>
-                <a href="#contacto" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Contacto</a>
-                <a href="#cita" class="block mt-4 text-center w-full bg-primary text-white px-4 py-3 rounded-lg font-medium">Pedir Cita</a>
+                <a href="index.html" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Inicio</a>
+                <a href="nuestra-clinica.html" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">La Clínica</a>
+                
+                <!-- Mobile Dropdown -->
+                <div>
+                    <button class="mobile-dropdown-trigger w-full flex justify-between items-center px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">
+                        Tratamientos <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="mobile-dropdown-menu space-y-1">
+                        <a href="odontologia-general.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-md">Odontología General</a>
+                        <a href="implantes.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-md">Implantología</a>
+                        <a href="ortodoncia.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-md">Ortodoncia Invisible</a>
+                        <a href="estetica-dental.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-md">Estética Dental</a>
+                        <a href="odontopediatria.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-md">Odontopediatría</a>
+                        <a href="periodoncia.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-md">Periodoncia</a>
+                        <a href="endodoncia.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-md">Endodoncia</a>
+                    </div>
+                </div>
+
+                <a href="nuestro-equipo.html" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Equipo</a>
+                <a href="contacto.html" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Contacto</a>
+                <a href="contacto.html#cita" class="block mt-4 text-center w-full bg-primary text-white px-4 py-3 rounded-lg font-medium">Pedir Cita</a>
             </div>
         </div>
     </header>
@@ -671,169 +697,6 @@
     </div>
 
     <!-- JavaScript for Interactivity -->
-    <script>
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when clicking a link
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-
-        // Form Handler
-        function handleSubmit(event) {
-            event.preventDefault();
-            const btn = event.target.querySelector('button');
-            const originalText = btn.innerText;
-            
-            btn.innerText = 'Enviando...';
-            btn.disabled = true;
-            btn.classList.add('opacity-75');
-
-            // Simulate server request
-            setTimeout(() => {
-                alert('¡Gracias! Hemos recibido tu solicitud. Te contactaremos en breve para confirmar la cita.');
-                event.target.reset();
-                btn.innerText = 'Mensaje Enviado';
-                btn.classList.remove('bg-primary');
-                btn.classList.add('bg-green-600');
-                
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.disabled = false;
-                    btn.classList.remove('opacity-75', 'bg-green-600');
-                    btn.classList.add('bg-primary');
-                }, 3000);
-            }, 1500);
-        }
-
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 20) {
-                navbar.classList.add('shadow-md');
-            } else {
-                navbar.classList.remove('shadow-md');
-            }
-        });
-
-        // Testimonial Slider Logic
-        const track = document.getElementById('testimonial-track');
-        const prevBtn = document.getElementById('prev-testimonial');
-        const nextBtn = document.getElementById('next-testimonial');
-        const dotsContainer = document.getElementById('testimonial-dots');
-        const slides = Array.from(track.children);
-        
-        let currentIndex = 0;
-        let autoPlayInterval;
-        const intervalTime = 5000;
-
-        function getVisibleSlides() {
-            if (window.innerWidth >= 1024) return 3;
-            if (window.innerWidth >= 768) return 2;
-            return 1;
-        }
-
-        function updateSlider() {
-            const visibleSlides = getVisibleSlides();
-            const maxIndex = slides.length - visibleSlides;
-            
-            if (currentIndex > maxIndex) currentIndex = maxIndex;
-            if (currentIndex < 0) currentIndex = 0;
-
-            const slideWidth = 100 / visibleSlides;
-            track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
-
-            // Update Dots
-            updateDots();
-        }
-
-        function createDots() {
-            dotsContainer.innerHTML = '';
-            const visibleSlides = getVisibleSlides();
-            const dotCount = slides.length - visibleSlides + 1;
-            
-            for (let i = 0; i < dotCount; i++) {
-                const dot = document.createElement('button');
-                dot.className = `w-3 h-3 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-secondary w-8' : 'bg-white/30'}`;
-                dot.addEventListener('click', () => {
-                    currentIndex = i;
-                    updateSlider();
-                    resetAutoPlay();
-                });
-                dotsContainer.appendChild(dot);
-            }
-        }
-
-        function updateDots() {
-            const dots = dotsContainer.children;
-            for (let i = 0; i < dots.length; i++) {
-                if (i === currentIndex) {
-                    dots[i].classList.add('bg-secondary', 'w-8');
-                    dots[i].classList.remove('bg-white/30');
-                } else {
-                    dots[i].classList.remove('bg-secondary', 'w-8');
-                    dots[i].classList.add('bg-white/30');
-                }
-            }
-        }
-
-        function nextSlide() {
-            const visibleSlides = getVisibleSlides();
-            if (currentIndex < slides.length - visibleSlides) {
-                currentIndex++;
-            } else {
-                currentIndex = 0;
-            }
-            updateSlider();
-        }
-
-        function prevSlide() {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                const visibleSlides = getVisibleSlides();
-                currentIndex = slides.length - visibleSlides;
-            }
-            updateSlider();
-        }
-
-        function startAutoPlay() {
-            autoPlayInterval = setInterval(nextSlide, intervalTime);
-        }
-
-        function resetAutoPlay() {
-            clearInterval(autoPlayInterval);
-            startAutoPlay();
-        }
-
-        nextBtn.addEventListener('click', () => {
-            nextSlide();
-            resetAutoPlay();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            prevSlide();
-            resetAutoPlay();
-        });
-
-        // Responsive handling
-        window.addEventListener('resize', () => {
-            createDots();
-            updateSlider();
-        });
-
-        // Initialize
-        createDots();
-        updateSlider();
-        startAutoPlay();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

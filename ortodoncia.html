@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ortodoncia Invisible | Clínica Dental</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e293b',
+                        secondary: '#d4af37',
+                        'accent-light': '#fdfbf7',
+                        'accent-beige': '#e5d5c0',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-700 antialiased bg-white pt-20">
+
+    <!-- Navbar -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-tooth text-3xl text-primary"></i>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold text-primary tracking-tight leading-none">CLÍNICA DENTAL</span>
+                        <span class="text-xs text-gray-500 uppercase tracking-widest">Excelencia & Salud</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium transition">Inicio</a>
+                    <a href="nuestra-clinica.html" class="text-gray-600 hover:text-primary font-medium transition">La Clínica</a>
+                    <div class="relative dropdown">
+                        <button class="flex items-center gap-1 text-primary font-bold transition py-8 border-b-2 border-secondary">
+                            Tratamientos <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="odontologia-general.html">Odontología General</a>
+                            <a href="implantes.html">Implantología</a>
+                            <a href="ortodoncia.html">Ortodoncia Invisible</a>
+                            <a href="estetica-dental.html">Estética Dental</a>
+                            <a href="odontopediatria.html">Odontopediatría</a>
+                            <a href="periodoncia.html">Periodoncia</a>
+                            <a href="endodoncia.html">Endodoncia</a>
+                        </div>
+                    </div>
+                    <a href="nuestro-equipo.html" class="text-gray-600 hover:text-primary font-medium transition">Equipo</a>
+                    <a href="contacto.html" class="text-gray-600 hover:text-primary font-medium transition">Contacto</a>
+                    <a href="contacto.html#cita" class="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-slate-800 transition shadow-lg">Pedir Cita</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full max-h-[80vh] overflow-y-auto">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
+                <a href="index.html" class="block px-3 py-3 text-base font-medium text-gray-700">Inicio</a>
+                <a href="nuestra-clinica.html" class="block px-3 py-3 text-base font-medium text-gray-700">La Clínica</a>
+                <div>
+                    <button class="mobile-dropdown-trigger w-full flex justify-between items-center px-3 py-3 text-base font-medium text-gray-700">
+                        Tratamientos <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="mobile-dropdown-menu space-y-1">
+                        <a href="odontologia-general.html" class="block px-6 py-2 text-sm text-gray-600">Odontología General</a>
+                        <a href="implantes.html" class="block px-6 py-2 text-sm text-gray-600">Implantología</a>
+                        <a href="ortodoncia.html" class="block px-6 py-2 text-sm text-primary font-bold">Ortodoncia Invisible</a>
+                        <a href="estetica-dental.html" class="block px-6 py-2 text-sm text-gray-600">Estética Dental</a>
+                        <a href="odontopediatria.html" class="block px-6 py-2 text-sm text-gray-600">Odontopediatría</a>
+                        <a href="periodoncia.html" class="block px-6 py-2 text-sm text-gray-600">Periodoncia</a>
+                        <a href="endodoncia.html" class="block px-6 py-2 text-sm text-gray-600">Endodoncia</a>
+                    </div>
+                </div>
+                <a href="nuestro-equipo.html" class="block px-3 py-3 text-base font-medium text-gray-700">Equipo</a>
+                <a href="contacto.html" class="block px-3 py-3 text-base font-medium text-gray-700">Contacto</a>
+                <a href="contacto.html#cita" class="block mt-4 text-center w-full bg-primary text-white px-4 py-3 rounded-lg font-medium">Pedir Cita</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-50 py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-1/2">
+                <span class="text-secondary font-bold uppercase tracking-widest text-sm mb-4 block">Tu sonrisa, siempre alineada</span>
+                <h1 class="text-4xl lg:text-6xl font-bold text-primary mb-6 leading-tight">Ortodoncia Invisible <span class="text-secondary">Invisalign</span></h1>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    Consigue la sonrisa que siempre has deseado de forma discreta, cómoda y sin que nadie lo note. La alternativa perfecta a los brackets tradicionales.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="contacto.html#cita" class="bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition shadow-xl text-center">Estudio Digital Gratuito</a>
+                    <a href="#proceso" class="bg-white border-2 border-primary text-primary px-8 py-4 rounded-full font-bold hover:bg-primary hover:text-white transition text-center">Ver Proceso</a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 relative">
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/20 rounded-full blur-2xl"></div>
+                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1000&auto=format&fit=crop" alt="Ortodoncia Invisible" class="rounded-3xl shadow-2xl relative z-10">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition">
+                    <i class="fa-solid fa-eye-slash text-3xl text-secondary mb-6"></i>
+                    <h3 class="text-xl font-bold text-primary mb-3">100% Invisible</h3>
+                    <p class="text-sm text-gray-600">Los alineadores son transparentes y prácticamente imperceptibles a la vista.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition">
+                    <i class="fa-solid fa-utensils text-3xl text-secondary mb-6"></i>
+                    <h3 class="text-xl font-bold text-primary mb-3">Removible</h3>
+                    <p class="text-sm text-gray-600">Puedes quitártelos para comer y cepillarte los dientes, manteniendo una higiene total.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition">
+                    <i class="fa-solid fa-feather text-3xl text-secondary mb-6"></i>
+                    <h3 class="text-xl font-bold text-primary mb-3">Sin Rozaduras</h3>
+                    <p class="text-sm text-gray-600">Al no tener metales ni alambres, se evitan las heridas y molestias típicas de los brackets.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-gray-50 hover:shadow-lg transition">
+                    <i class="fa-solid fa-laptop-code text-3xl text-secondary mb-6"></i>
+                    <h3 class="text-xl font-bold text-primary mb-3">Simulación 3D</h3>
+                    <p class="text-sm text-gray-600">Verás el resultado final de tu sonrisa incluso antes de empezar el tratamiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="proceso" class="py-24 bg-accent-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-4">Tu camino hacia una sonrisa perfecta</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Nuestro proceso digital paso a paso</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="relative text-center">
+                    <div class="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold mx-auto mb-6">1</div>
+                    <h4 class="text-xl font-bold mb-3">Escaneado 3D</h4>
+                    <p class="text-gray-600">Tomamos una muestra digital de tu boca sin pastas molestas gracias a nuestro escáner iTero.</p>
+                </div>
+                <div class="relative text-center">
+                    <div class="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold mx-auto mb-6">2</div>
+                    <h4 class="text-xl font-bold mb-3">Planificación</h4>
+                    <p class="text-gray-600">Diseñamos el movimiento de cada pieza dental y te mostramos el resultado final en 3D.</p>
+                </div>
+                <div class="relative text-center">
+                    <div class="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold mx-auto mb-6">3</div>
+                    <h4 class="text-xl font-bold mb-3">Nuevos Alineadores</h4>
+                    <p class="text-gray-600">Recibes tus férulas personalizadas que cambiarás cada 1-2 semanas hasta completar el proceso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6 justify-center md:justify-start">
+                         <i class="fa-solid fa-tooth text-2xl text-primary"></i>
+                         <span class="text-lg font-bold text-primary">CLÍNICA DENTAL</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Comprometidos con tu bienestar bucodental. Ofrecemos tratamientos personalizados y de calidad.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-primary mb-4">Tratamientos</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="odontologia-general.html" class="hover:text-primary">Odontología General</a></li>
+                        <li><a href="implantes.html" class="hover:text-primary">Implantes Dentales</a></li>
+                        <li><a href="ortodoncia.html" class="hover:text-primary">Ortodoncia Invisible</a></li>
+                        <li><a href="estetica-dental.html" class="hover:text-primary">Estética Dental</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-primary mb-4">La Clínica</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="nuestra-clinica.html" class="hover:text-primary">Instalaciones</a></li>
+                        <li><a href="nuestro-equipo.html" class="hover:text-primary">Nuestro Equipo</a></li>
+                        <li><a href="contacto.html" class="hover:text-primary">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-primary mb-4">Contacto</h4>
+                    <p class="text-sm text-gray-600 mb-2">Calle San Nicolás, 7, Portugalete</p>
+                    <p class="text-sm text-gray-600">944 72 09 32</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2024 Clínica Dental. Todos los derechos reservados.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
